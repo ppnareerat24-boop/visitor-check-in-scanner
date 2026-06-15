@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Register Visit</title>
+</head>
+<body>
+    <h1>Register Your Visit</h1>
+    <img src="/static/{{ image }}" width="300"><br><br>
+    <p>Photo taken at: {{ time }}</p>
+
+    <form action="/submit" method="POST">
+        <label>Name:</label><br>
+        <input type="text" name="name" required><br><br>
+
+        <label>Role:</label><br>
+        <select name="role" required>
+            <option value="">-- Select Role --</option>
+            <option value="Student">Student</option>
+            <option value="Teacher">Teacher</option>
+            <option value="Visitor">Visitor</option>
+            <option value="Staff">Staff</option>
+        </select><br><br>
+
+        <label>Reason for Visit:</label><br>
+        <textarea name="reason" rows="4" cols="40" required></textarea><br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
